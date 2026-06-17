@@ -298,9 +298,10 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-/* Press-release article body: white content card on the blue-grey page bg */
+/* Press-release article body: white content card on the blue-grey page bg.
+   60px top gap separates the card from the hero banner (matches live). */
 main > .section:not(.hero-banner-container) {
-  margin: 0 auto;
+  margin: 60px auto 0;
   max-width: 1110px;
   background-color: #fff;
 }
@@ -310,9 +311,12 @@ main > .section:not(.hero-banner-container) > div {
   padding: 20px 60px;
 }
 
-/* article headline (matches live: blue, 30px, generous vertical rhythm) */
+/* article headline (matches live: blue, 30px, generous vertical rhythm,
+   thin light-grey vertical accent bar before the title) */
 main > .section:not(.hero-banner-container) .default-content-wrapper h1 {
   margin: 48px 0 41px;
+  border-left: 1px solid #dadada;
+  padding-left: 19px;
   font-size: 30px;
   line-height: 1.1;
 }
