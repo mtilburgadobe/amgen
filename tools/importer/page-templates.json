@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "press-release-page",
+      "urls": [
+        "https://www.amgen.com/newsroom/press-releases/2021/01/amgen-to-achieve-carbon-neutrality-by-2027"
+      ],
+      "representativeUrl": "https://www.amgen.com/newsroom/press-releases/2021/01/amgen-to-achieve-carbon-neutrality-by-2027",
+      "coverageGaps": [],
+      "description": "Newsroom press release / company statement article: breadcrumb navigation header over a blue banner, followed by an article body with a headline and long-form rich-text paragraphs (dateline, body copy, About Amgen, forward-looking statements, contacts, source).",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "body > div.component.container.breadcrumbContainer.blue-background.background-image > div.component-content > div.component.rich-text",
+            ".breadcrumbContainer .component.rich-text"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc8",
+          "name": "section-breadcrumb-banner",
+          "selector": [
+            "body > div.component.container.breadcrumbContainer.blue-background.background-image",
+            ".breadcrumbContainer.blue-background"
+          ],
+          "style": null,
+          "blocks": ["hero-banner"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc9",
+          "name": "section-article-body",
+          "selector": [
+            "body > div.news-articles-container",
+            ".news-articles-container"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "body > div.news-articles-container > section.m-article > h1",
+            "body > div.news-articles-container > section.m-article > div.xn-content"
+          ]
+        }
+      ]
+    }
+  ]
+}

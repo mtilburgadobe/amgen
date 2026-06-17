@@ -1,0 +1,40 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-06-17T17:18:48.961Z",
+  "sourceContext": {
+    "originUrl": "https://www.amgen.com/newsroom/press-releases/2021/01/amgen-to-achieve-carbon-neutrality-by-2027",
+    "originPage": "Amgen newsroom press-release page (press-release-page template)",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "blue",
+    "density": "compact",
+    "purpose": "page-title-banner",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "press release pages",
+      "newsroom article landing banners",
+      "section-title banners on a colored background",
+      "text-only page-title hero banners"
+    ],
+    "notSuitableFor": [
+      "full-bleed photographic hero banners",
+      "marketing landing pages with background images and CTAs",
+      "heroes requiring a foreground image or call-to-action button"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/newsroom/press-releases/2021/01/amgen-to-achieve-carbon-neutrality-by-2027"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-17T17:18:48.961Z"
+  }
+}
