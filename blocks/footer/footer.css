@@ -1,20 +1,101 @@
+/* Amgen footer — full-width blue->cyan gradient band, white content */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-image: linear-gradient(45deg, rgb(0, 99, 195) 0%, rgb(0, 188, 228) 100%);
+  color: #fff;
+  font-family: var(--body-font-family);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer-inner {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 83px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-footer .footer p {
+footer .footer-inner p {
   margin: 0;
+  color: #fff;
+  font-size: 14px;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+/* brand logo */
+footer .footer-brand img {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+/* reset list bullets */
+footer .footer-inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* social section */
+footer .footer-social h3 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+}
+
+footer .footer-social ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+footer .footer-social img {
+  height: 34px;
+  width: auto;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+footer .footer-social a:hover img {
+  opacity: 0.8;
+}
+
+/* legal / utility links */
+footer .footer-legal ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+footer .footer-legal a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+footer .footer-legal a:hover {
+  text-decoration: underline;
+}
+
+/* copyright */
+footer .footer-copyright p {
+  font-size: 14px;
+}
+
+/* ---------- Mobile ---------- */
+@media (width < 900px) {
+  footer .footer-inner {
+    padding: 40px 16px;
+    gap: 20px;
+  }
+
+  footer .footer-social ul {
+    flex-wrap: wrap;
+  }
+
+  footer .footer-legal ul {
+    flex-direction: column;
+    gap: 12px;
   }
 }

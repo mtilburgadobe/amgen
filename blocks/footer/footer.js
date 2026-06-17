@@ -1,20 +1,42 @@
+// Amgen footer — content-first. All copy/links/images live in
+// content/footer.plain.html; this module fetches that fragment, reads its DOM,
+// and assigns structural classes. No footer text/URLs are hardcoded here.
+
 import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
 
-/**
- * loads and decorates the footer
- * @param {Element} block The footer block element
- */
+function getFooterPath() {
+  const meta = getMetadata('footer');
+  return meta ? new URL(meta, window.location).pathname : '/footer';
+}
+
+async function fetchFooter() {
+  let resp = await fetch('/content/footer.plain.html');
+  if (!resp.ok) {
+    resp = await fetch(`${getFooterPath()}.plain.html`);
+  }
+  if (!resp.ok) return null;
+  const html = await resp.text();
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp;
+}
+
 export default async function decorate(block) {
-  // load footer as fragment
-  const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
-  const fragment = await loadFragment(footerPath);
+  const tree = await fetchFooter();
+  if (!tree) return;
 
-  // decorate footer DOM
-  block.textContent = '';
+  const sections = [...tree.children].filter((c) => c.tagName === 'DIV');
+  // Order in footer.plain.html: brand logo, social, legal links, copyright.
+  const [brand, social, legal, copyright] = sections;
+  if (brand) brand.classList.add('footer-brand');
+  if (social) social.classList.add('footer-social');
+  if (legal) legal.classList.add('footer-legal');
+  if (copyright) copyright.classList.add('footer-copyright');
+
   const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+  footer.className = 'footer-inner';
+  sections.forEach((s) => footer.append(s));
 
+  block.textContent = '';
   block.append(footer);
 }
