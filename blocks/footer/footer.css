@@ -6,13 +6,16 @@ footer {
   font-family: var(--body-font-family);
 }
 
+/* two-column layout: social (left), legal + copyright (right); logo top-right */
 footer .footer-inner {
   max-width: 1110px;
   margin: 0 auto;
   padding: 83px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 16px;
+  align-items: start;
 }
 
 footer .footer-inner p {
@@ -21,9 +24,19 @@ footer .footer-inner p {
   font-size: 14px;
 }
 
-/* brand logo */
+/* brand logo — top right */
+footer .footer-brand {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+
+footer .footer-brand p {
+  margin: 0;
+}
+
 footer .footer-brand img {
-  height: 24px;
+  height: 34px;
   width: auto;
   display: block;
 }
@@ -35,9 +48,14 @@ footer .footer-inner ul {
   padding: 0;
 }
 
-/* social section */
+/* social section — left column, spans both rows */
+footer .footer-social {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
 footer .footer-social h3 {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -51,7 +69,7 @@ footer .footer-social ul {
 }
 
 footer .footer-social img {
-  height: 34px;
+  height: 20px;
   width: auto;
   display: block;
   transition: opacity 0.2s ease;
@@ -61,11 +79,17 @@ footer .footer-social a:hover img {
   opacity: 0.8;
 }
 
-/* legal / utility links */
+/* legal / utility links — right column, row 1 */
+footer .footer-legal {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+}
+
 footer .footer-legal ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 24px;
+  gap: 10px 24px;
 }
 
 footer .footer-legal a {
@@ -78,7 +102,12 @@ footer .footer-legal a:hover {
   text-decoration: underline;
 }
 
-/* copyright */
+/* copyright — right column, row 2 */
+footer .footer-copyright {
+  grid-column: 2;
+  grid-row: 2;
+}
+
 footer .footer-copyright p {
   font-size: 14px;
 }
@@ -86,8 +115,14 @@ footer .footer-copyright p {
 /* ---------- Mobile ---------- */
 @media (width < 900px) {
   footer .footer-inner {
+    display: flex;
+    flex-direction: column;
     padding: 40px 16px;
     gap: 20px;
+  }
+
+  footer .footer-brand {
+    justify-self: start;
   }
 
   footer .footer-social ul {
