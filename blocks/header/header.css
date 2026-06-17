@@ -1,272 +1,276 @@
-/* header and nav layout */
+/* Amgen header — white sticky bar, blue uppercase Poppins nav, hover megamenus */
+
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: #fff;
   width: 100%;
-  z-index: 2;
-  position: fixed;
+  z-index: 20;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 8%);
 }
 
 header nav {
   box-sizing: border-box;
-  display: grid;
-  grid-template:
-    'hamburger brand tools' var(--nav-height)
-    'sections sections sections' 1fr / auto 1fr auto;
+  display: flex;
   align-items: center;
-  gap: 0 24px;
-  margin: auto;
-  max-width: 1248px;
-  height: var(--nav-height);
+  gap: 16px;
+  max-width: 1440px;
+  height: 60px;
+  margin: 0 auto;
   padding: 0 24px;
   font-family: var(--body-font-family);
 }
 
-header nav[aria-expanded='true'] {
-  grid-template:
-    'hamburger brand' var(--nav-height)
-    'sections sections' 1fr
-    'tools tools' var(--nav-height) / auto 1fr;
-  overflow-y: auto;
-  min-height: 100dvh;
+/* brand / logo */
+header nav .nav-brand {
+  flex: 0 0 auto;
 }
 
-@media (width >= 900px) {
-  header .nav-wrapper {
-    position: relative;
-  }
-
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
-  }
-
-  header nav[aria-expanded='true'] {
-    min-height: 0;
-    overflow: visible;
-  }
-}
-
-header nav p {
+header nav .nav-brand p {
   margin: 0;
-  line-height: 1;
 }
 
-header nav a:any-link {
-  color: currentcolor;
+header nav .nav-brand img {
+  height: 32px;
+  width: auto;
+  display: block;
 }
 
-/* hamburger */
-header nav .nav-hamburger {
-  grid-area: hamburger;
-  height: 22px;
+/* reset list bullets across the nav */
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* main nav (megamenu triggers) */
+header nav .nav-sections {
+  flex: 1 1 auto;
+}
+
+header nav .nav-sections > ul {
   display: flex;
   align-items: center;
+  gap: 22px;
 }
 
-header nav .nav-hamburger button {
-  height: 22px;
-  margin: 0;
-  border: 0;
-  border-radius: 0;
+header nav .nav-sections > ul > li > a,
+header nav .nav-secondary > ul > li > a {
+  color: var(--link-color);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+header nav .nav-sections > ul > li > a:hover,
+header nav .nav-secondary > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+/* megamenu drop panels (desktop) */
+header nav .nav-sections .nav-drop {
+  position: relative;
+}
+
+header nav .nav-sections .nav-drop > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  padding: 16px 0;
+  background: #fff;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 12%);
+  border-top: 2px solid var(--link-color);
+  z-index: 30;
+}
+
+header nav .nav-sections .nav-drop[aria-expanded="true"] > ul {
+  display: block;
+}
+
+header nav .nav-sections .nav-drop > ul li a {
+  display: block;
+  padding: 6px 24px;
+  color: var(--text-color);
+  font-size: 14px;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+header nav .nav-sections .nav-drop > ul li a:hover {
+  color: var(--link-color);
+  background: #f4f7fb;
+}
+
+/* third level: indented sub-lists */
+header nav .nav-sections .nav-drop ul ul {
+  display: block;
+  position: static;
+  min-width: 0;
+  padding: 0 0 8px;
+  box-shadow: none;
+  border: none;
+}
+
+header nav .nav-sections .nav-drop ul ul li a {
+  padding-left: 40px;
+  color: #6a6a6a;
+  font-size: 13px;
+}
+
+/* right-side secondary links */
+header nav .nav-secondary {
+  flex: 0 0 auto;
+}
+
+header nav .nav-secondary > ul {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* tools (globe, search) */
+header nav .nav-tools {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+header nav .nav-tools > ul {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+header nav .nav-tools img {
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+header nav .nav-search-form {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  padding: 8px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 12%);
+  z-index: 30;
+}
+
+header nav .nav-search-form input {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font: inherit;
+  min-width: 220px;
+}
+
+/* hamburger — hidden on desktop */
+header nav .nav-hamburger {
+  display: none;
+  flex: 0 0 auto;
+  margin-left: auto;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
   padding: 0;
-  background-color: var(--background-color);
-  color: inherit;
-  overflow: initial;
-  text-overflow: initial;
-  white-space: initial;
 }
 
 header nav .nav-hamburger-icon,
 header nav .nav-hamburger-icon::before,
 header nav .nav-hamburger-icon::after {
-  box-sizing: border-box;
-  display: block;
-  position: relative;
-  width: 20px;
-}
-
-header nav .nav-hamburger-icon::before,
-header nav .nav-hamburger-icon::after {
   content: '';
+  display: block;
   position: absolute;
-  background: currentcolor;
-}
-
-header nav[aria-expanded='false'] .nav-hamburger-icon,
-header nav[aria-expanded='false'] .nav-hamburger-icon::before,
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
-  height: 2px;
-  border-radius: 2px;
-  background: currentcolor;
-}
-
-header nav[aria-expanded='false'] .nav-hamburger-icon::before {
-  top: -6px;
-}
-
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
-  top: 6px;
-}
-
-header nav[aria-expanded='true'] .nav-hamburger-icon {
-  height: 22px;
-}
-
-header nav[aria-expanded='true'] .nav-hamburger-icon::before,
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
-  top: 3px;
-  left: 1px;
-  transform: rotate(45deg);
-  transform-origin: 2px 1px;
   width: 24px;
   height: 2px;
-  border-radius: 2px;
+  background: var(--link-color);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
-  top: unset;
-  bottom: 3px;
-  transform: rotate(-45deg);
+header nav .nav-hamburger-icon {
+  position: relative;
+  top: 13px;
 }
 
-@media (width >= 900px) {
+header nav .nav-hamburger-icon::before { top: -7px; }
+header nav .nav-hamburger-icon::after { top: 7px; }
+
+/* hamburger → cross when open */
+header nav.nav-open .nav-hamburger-icon { background: transparent; }
+header nav.nav-open .nav-hamburger-icon::before { transform: translateY(7px) rotate(45deg); }
+header nav.nav-open .nav-hamburger-icon::after { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- Mobile ---------- */
+@media (width < 900px) {
+  header nav {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 60px;
+    padding: 0 16px;
+  }
+
   header nav .nav-hamburger {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-/* brand */
-header .nav-brand {
-  grid-area: brand;
-  flex-basis: 128px;
-  font-size: var(--heading-font-size-s);
-  font-weight: 700;
-  line-height: 1;
-}
-
-header nav .nav-brand img {
-  width: 128px;
-  height: auto;
-}
-
-/* sections */
-header nav .nav-sections {
-  grid-area: sections;
-  flex: 1 1 auto;
-  display: none;
-  visibility: hidden;
-}
-
-header nav[aria-expanded='true'] .nav-sections {
-  display: block;
-  visibility: visible;
-  align-self: start;
-}
-
-header nav .nav-sections ul {
-  list-style: none;
-  padding-left: 0;
-  font-size: var(--body-font-size-s);
-}
-
-header nav .nav-sections ul > li {
-  font-weight: 500;
-}
-
-header nav .nav-sections ul > li > ul {
-  margin-top: 0;
-}
-
-header nav .nav-sections ul > li > ul > li {
-  font-weight: 400;
-}
-
-@media (width >= 900px) {
-  header nav .nav-sections {
     display: block;
-    visibility: visible;
-    white-space: nowrap;
-  }
-
-  header nav[aria-expanded='true'] .nav-sections {
-    align-self: unset;
-  }
-
-  header nav .nav-sections .nav-drop {
     position: relative;
-    padding-right: 16px;
-    cursor: pointer;
   }
 
-  header nav .nav-sections .nav-drop::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0.5em;
-    right: 2px;
-    transform: rotate(135deg);
-    width: 6px;
-    height: 6px;
-    border: 2px solid currentcolor;
-    border-radius: 0 1px 0 0;
-    border-width: 2px 2px 0 0;
+  header nav .nav-sections,
+  header nav .nav-secondary,
+  header nav .nav-tools {
+    display: none;
+    flex-basis: 100%;
   }
 
-  header nav .nav-sections .nav-drop[aria-expanded='true']::after {
-    top: unset;
-    bottom: 0.5em;
-    transform: rotate(315deg);
+  header nav.nav-open .nav-sections,
+  header nav.nav-open .nav-secondary,
+  header nav.nav-open .nav-tools {
+    display: block;
   }
 
-  header nav .nav-sections ul {
+  header nav .nav-sections > ul,
+  header nav .nav-secondary > ul,
+  header nav .nav-tools > ul {
+    display: block;
+    width: 100%;
+  }
+
+  header nav .nav-sections > ul > li,
+  header nav .nav-secondary > ul > li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  header nav .nav-sections > ul > li > a,
+  header nav .nav-secondary > ul > li > a {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+  }
+
+  /* accordion: nested panels collapsed by default, expand when open */
+  header nav .nav-sections .nav-drop > ul {
+    display: none;
+    position: static;
+    min-width: 0;
+    padding: 0 0 8px 16px;
+    box-shadow: none;
+    border-top: none;
+  }
+
+  header nav .nav-sections .nav-drop[aria-expanded="true"] > ul {
+    display: block;
+  }
+
+  header nav .nav-tools > ul {
     display: flex;
-    gap: 24px;
-    margin: 0;
+    gap: 20px;
+    padding: 14px 0;
   }
-
-  header nav .nav-sections .default-content-wrapper > ul > li {
-    flex: 0 1 auto;
-    position: relative;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul {
-    display: none;
-    position: relative;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
-    display: block;
-    position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
-    padding: 16px;
-    background-color: var(--light-color);
-    white-space: initial;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 16px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 8px 0;
-  }
-}
-
-/* tools */
-header nav .nav-tools {
-  grid-area: tools;
 }
