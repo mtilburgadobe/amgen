@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases/2021/05/fda-approves-lumakras-sotorasib-the-first-and-only-targeted-treatment-for-patients-with-kras-g12cmutated-locally-advanced-or-metastatic-nonsmall-cell-lung-cancer",
+  "path": "newsroom/press-releases/2021/05/fda-approves-lumakras-sotorasib-the-first-and-only-targeted-treatment-for-patients-with-kras-g12cmutated-locally-advanced-or-metastatic-nonsmall-cell-lung-cancer",
+  "timestamp": "2026-06-17T19:59:25.266Z",
+  "title": "FDA Approves LUMAKRAS™ (Sotorasib), The First And Only Targeted Treatment For Patients With KRAS G12C-Mutated Locally Advanced Or Metastatic Non-Small Cell Lung Cancer| Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

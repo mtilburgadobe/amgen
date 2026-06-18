@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases/2008/01/pooled-phase-3-study-of-nplatetm-romiplostim-in-adult-patients-with-chronic-itp-published-in-the-lancet",
+  "path": "newsroom/press-releases/2008/01/pooled-phase-3-study-of-nplatetm-romiplostim-in-adult-patients-with-chronic-itp-published-in-the-lancet",
+  "timestamp": "2026-06-17T19:14:22.344Z",
+  "title": "Pooled Phase 3 Study of Nplate(TM) (Romiplostim) in Adult Patients with Chronic ITP Published in The Lancet| Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

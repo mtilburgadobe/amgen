@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases/2019/06/fda-approves-amgen-and-allergans-kanjinti-trastuzumabanns-a-biosimilar-to-herceptin-trastuzumab",
+  "path": "newsroom/press-releases/2019/06/fda-approves-amgen-and-allergans-kanjinti-trastuzumabanns-a-biosimilar-to-herceptin-trastuzumab",
+  "timestamp": "2026-06-17T19:52:29.051Z",
+  "title": "FDA Approves Amgen And Allergan's KANJINTI™ (trastuzumab-anns), A Biosimilar To Herceptin® (trastuzumab)| Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

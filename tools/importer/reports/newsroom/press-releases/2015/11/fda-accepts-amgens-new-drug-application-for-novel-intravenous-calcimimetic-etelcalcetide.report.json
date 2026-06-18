@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases/2015/11/fda-accepts-amgens-new-drug-application-for-novel-intravenous-calcimimetic-etelcalcetide",
+  "path": "newsroom/press-releases/2015/11/fda-accepts-amgens-new-drug-application-for-novel-intravenous-calcimimetic-etelcalcetide",
+  "timestamp": "2026-06-17T19:38:48.946Z",
+  "title": "FDA Accepts Amgen's New Drug Application For Novel Intravenous Calcimimetic Etelcalcetide| Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

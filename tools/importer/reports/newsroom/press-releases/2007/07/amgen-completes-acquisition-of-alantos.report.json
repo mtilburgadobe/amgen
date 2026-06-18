@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases/2007/07/amgen-completes-acquisition-of-alantos",
+  "path": "newsroom/press-releases/2007/07/amgen-completes-acquisition-of-alantos",
+  "timestamp": "2026-06-17T19:11:31.551Z",
+  "title": "Amgen Completes Acquisition of Alantos| Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

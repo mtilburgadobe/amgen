@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases/2014/05/fda-approves-firstline-use-of-vectibix-panitumumab-plus-folfox-for-patients-with-wildtype-kras-metastatic-colorectal-cancer",
+  "path": "newsroom/press-releases/2014/05/fda-approves-firstline-use-of-vectibix-panitumumab-plus-folfox-for-patients-with-wildtype-kras-metastatic-colorectal-cancer",
+  "timestamp": "2026-06-17T19:34:06.121Z",
+  "title": "FDA Approves First-Line Use of Vectibix® (Panitumumab) Plus FOLFOX for Patients with Wild-Type KRAS Metastatic Colorectal Cancer| Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

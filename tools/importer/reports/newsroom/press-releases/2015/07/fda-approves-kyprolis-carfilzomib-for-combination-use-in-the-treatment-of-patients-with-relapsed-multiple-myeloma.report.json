@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases/2015/07/fda-approves-kyprolis-carfilzomib-for-combination-use-in-the-treatment-of-patients-with-relapsed-multiple-myeloma",
+  "path": "newsroom/press-releases/2015/07/fda-approves-kyprolis-carfilzomib-for-combination-use-in-the-treatment-of-patients-with-relapsed-multiple-myeloma",
+  "timestamp": "2026-06-17T19:37:00.295Z",
+  "title": "FDA Approves Kyprolis® (carfilzomib) For Combination Use In The Treatment Of Patients With Relapsed Multiple Myeloma| Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

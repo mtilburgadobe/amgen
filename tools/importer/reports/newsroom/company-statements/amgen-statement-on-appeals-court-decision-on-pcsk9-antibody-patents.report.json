@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/company-statements/amgen-statement-on-appeals-court-decision-on-pcsk9-antibody-patents",
+  "path": "newsroom/company-statements/amgen-statement-on-appeals-court-decision-on-pcsk9-antibody-patents",
+  "timestamp": "2026-06-17T19:02:45.495Z",
+  "title": "Amgen Statement on Appeals Court Decision on PCSK9 Antibody Patents | Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

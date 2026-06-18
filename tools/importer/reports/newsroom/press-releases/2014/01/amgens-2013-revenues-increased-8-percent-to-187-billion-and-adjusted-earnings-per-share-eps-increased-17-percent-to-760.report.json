@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases/2014/01/amgens-2013-revenues-increased-8-percent-to-187-billion-and-adjusted-earnings-per-share-eps-increased-17-percent-to-760",
+  "path": "newsroom/press-releases/2014/01/amgens-2013-revenues-increased-8-percent-to-187-billion-and-adjusted-earnings-per-share-eps-increased-17-percent-to-760",
+  "timestamp": "2026-06-17T19:32:34.911Z",
+  "title": "Amgen's 2013 Revenues Increased 8 Percent To $18.7 Billion And Adjusted Earnings Per Share (EPS) Increased 17 Percent To $7.60| Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

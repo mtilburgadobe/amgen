@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases",
+  "path": "newsroom/press-releases",
+  "timestamp": "2026-06-17T19:03:21.221Z",
+  "title": "News | Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

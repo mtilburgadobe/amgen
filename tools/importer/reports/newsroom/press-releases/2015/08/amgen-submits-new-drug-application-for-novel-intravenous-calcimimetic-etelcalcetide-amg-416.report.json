@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases/2015/08/amgen-submits-new-drug-application-for-novel-intravenous-calcimimetic-etelcalcetide-amg-416",
+  "path": "newsroom/press-releases/2015/08/amgen-submits-new-drug-application-for-novel-intravenous-calcimimetic-etelcalcetide-amg-416",
+  "timestamp": "2026-06-17T19:37:08.992Z",
+  "title": "Amgen Submits New Drug Application For Novel Intravenous Calcimimetic Etelcalcetide (AMG 416)| Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

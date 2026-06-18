@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.amgen.com/newsroom/press-releases/2016/05/fda-grants-priority-review-for-amgens-supplemental-biologics-license-application-for-blincyto-blinatumomab",
+  "path": "newsroom/press-releases/2016/05/fda-grants-priority-review-for-amgens-supplemental-biologics-license-application-for-blincyto-blinatumomab",
+  "timestamp": "2026-06-17T19:40:37.243Z",
+  "title": "FDA Grants Priority Review For Amgen's Supplemental Biologics License Application For BLINCYTO® (Blinatumomab)| Amgen",
+  "template": "press-release-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}
